@@ -76,8 +76,7 @@ const EmotionResult: React.FC<EmotionResultProps> = ({ expression, confidence })
             </div>
             <Progress 
               value={confidencePercent} 
-              className="h-2" 
-              indicatorClassName={`bg-${emotionColor}`}
+              className={`h-2 bg-secondary [&>div]:bg-${emotionColor}`}
             />
           </div>
         </CardContent>

@@ -9,12 +9,12 @@ const Header: React.FC = () => {
           <div className="flex items-center">
             <div className="bg-primary/10 p-2 rounded-full mr-3">
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-lg font-bold">
-                EP
+                F
               </div>
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
-                EmotionPeek
+                Facialize
               </h1>
               <p className="text-xs text-muted-foreground">Facial Expression Recognition</p>
             </div>

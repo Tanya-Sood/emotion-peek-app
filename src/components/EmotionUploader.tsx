@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Camera, Upload, Image } from 'lucide-react';
@@ -155,14 +154,22 @@ const EmotionUploader: React.FC = () => {
       }
 
       const data = await response.json();
+      
+      // Handle the response based on your backend's format
+      const expression = data.predicted_class;
+      const confidence = data.confidence;
+      
+      // Capitalize first letter of expression
+      const capitalizedExpression = expression.charAt(0).toUpperCase() + expression.slice(1);
+      
       setPrediction({
-        expression: data.expression,
-        confidence: data.confidence
+        expression: capitalizedExpression,
+        confidence: confidence
       });
 
       toast({
         title: 'Analysis Complete',
-        description: `Detected emotion: ${data.expression}`,
+        description: `Detected emotion: ${capitalizedExpression}`,
       });
     } catch (error) {
       console.error('Error:', error);

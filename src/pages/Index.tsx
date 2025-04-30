@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import EmotionUploader from '@/components/EmotionUploader';
 import InfoCard from '@/components/InfoCard';
+import { Info, Lock, Activity } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -27,6 +28,7 @@ const Index = () => {
               <InfoCard
                 title="How It Works"
                 description="Our simple 3-step process"
+                icon={<Info className="h-8 w-8 text-primary" />}
               >
                 <ol className="space-y-3">
                   <li className="flex items-start">
@@ -47,6 +49,7 @@ const Index = () => {
               <InfoCard
                 title="Privacy First"
                 description="Your data stays private"
+                icon={<Lock className="h-8 w-8 text-primary" />}
               >
                 <p className="text-sm">
                   Your photos are processed securely and never stored on our servers. 
@@ -57,6 +60,7 @@ const Index = () => {
               <InfoCard
                 title="Emotions Detected"
                 description="Our AI recognizes 7 emotions"
+                icon={<Activity className="h-8 w-8 text-primary" />}
               >
                 <div className="grid grid-cols-2 gap-2">
                   <div className="flex items-center">
